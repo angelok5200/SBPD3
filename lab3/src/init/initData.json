@@ -1,0 +1,53 @@
+{
+  "type": "directory",
+  "rights": {
+    "read": ["user1", "admin"],
+    "write": ["user1", "admin"],
+    "delete": ["admin"]
+  },
+  "files": {
+    "secure": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin"],
+        "write": ["admin"],
+        "delete": ["admin"]
+      },
+      "files": {
+        "register": {
+          "type": "file",
+          "rights": {
+            "read": ["admin"],
+            "write": ["admin"],
+            "delete": ["admin"]
+          },
+          "content": "[{\"login\": \"admin\", \"pasword\": \"password1234\"}, {\"login\": \"user1\", \"pasword\": \"123456\"}]"
+        }
+      }
+    },
+
+    "B": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin"],
+        "write": ["admin"],
+        "delete": ["admin"]
+      },
+      "files": {
+
+      }
+    },
+
+    "D": {
+      "type": "directory",
+      "rights": {
+        "read": ["admin"],
+        "write": ["admin"],
+        "delete": ["admin"]
+      },
+      "files": {
+
+      }
+    }
+  }
+}
